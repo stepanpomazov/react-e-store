@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-//import { useDispatch } from 'react-redux';
 import { RootState } from '../store';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart } from 'react-icons/fa';

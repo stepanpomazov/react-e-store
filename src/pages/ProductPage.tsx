@@ -3,8 +3,8 @@ import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from '../store/cartSlice';
 import { getProductById } from '../api/api';
-import { Product } from '../store/Product'; // Импортируем интерфейс для продукта
-import styles from '../styles/ProductPage.module.scss'; // Импортируем стили
+import { Product } from '../store/Product'; 
+import styles from '../styles/ProductPage.module.scss'; 
 
 const ProductPage: React.FC = () => {
   const { id } = useParams();

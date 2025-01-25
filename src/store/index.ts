@@ -1,4 +1,4 @@
-// src/store/index.ts
+
 import { configureStore } from '@reduxjs/toolkit';
 import cartReducer from './cartSlice';
 
@@ -9,11 +9,8 @@ const store = configureStore({
   },
 });
 
-// Экспортируем store как default
 export default store;
 
-// Экспортируем тип RootState, чтобы использовать его в других файлах
 export type RootState = ReturnType<typeof store.getState>;
 
-// Экспортируем тип для dispatch
 export type AppDispatch = typeof store.dispatch;

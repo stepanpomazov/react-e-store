@@ -1,4 +1,3 @@
-// src/App.tsx
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -13,7 +12,6 @@ const App: React.FC = () => {
     <Router>
       <div className="app">
         <header className="app-header">
-          {/* Размещаем корзину в правом верхнем углу */}
           <CartIcon />
         </header>
 
