@@ -1,0 +1,61 @@
+.cart-icon {
+  position: fixed; /* Фиксируем иконку в правом верхнем углу */
+  top: 20px; /* Отступ от верхнего края */
+  right: 20px; /* Отступ от правого края */
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  font-size: 36px; /* Увеличиваем размер иконки для более яркого восприятия */
+  padding: 12px; /* Увеличиваем отступ внутри иконки */
+  background-color: #fff; /* Белый фон для иконки */
+  border-radius: 50%; /* Округлая форма */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Увеличиваем тень вокруг иконки */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Плавные анимации */
+  cursor: pointer; /* Указатель на иконке */
+  z-index: 1000; /* Ставим на передний план */
+}
+
+.cart-icon:hover {
+  background-color: #f1f1f1; /* Цвет фона при наведении */
+  transform: scale(1.1); /* Увеличиваем иконку при наведении */
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3); /* Увеличиваем тень при наведении */
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #ff3b30; /* Цвет фона */
+  color: white;
+  border-radius: 50%;
+  padding: 6px;
+  font-size: 16px; /* Увеличиваем размер цифры */
+  font-weight: bold;
+  min-width: 24px;
+  min-height: 24px;
+  display: flex;
+  justify-content: center; /* Центрируем цифру по горизонтали */
+  align-items: center; /* Центрируем цифру по вертикали */
+  text-align: center;
+  border: 3px solid #fff; /* Белая рамка для выделения */
+  transition: background-color 0.3s ease, transform 0.3s ease, font-size 0.3s ease;
+}
+
+.cart-item-count:hover {
+  background-color: #e60000; /* Меняем фон при наведении на цифру */
+  transform: scale(1.2); /* Увеличиваем цифру при наведении */
+  font-size: 18px; /* Увеличиваем размер цифры при наведении */
+}
+
+@media (max-width: 768px) {
+  .cart-icon {
+    font-size: 32px; /* Уменьшаем размер иконки на мобильных */
+    padding: 10px; /* Уменьшаем отступы */
+  }
+
+  .cart-item-count {
+    font-size: 14px; /* Уменьшаем размер цифры */
+    min-width: 20px;
+    min-height: 20px;
+  }
+}
