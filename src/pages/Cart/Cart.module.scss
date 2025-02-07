@@ -1,34 +1,36 @@
-/* Стили корзины */
 .cart-container {
-  padding: 20px;
+  padding-top: 20px;
+  padding: 15px;
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
-  margin: 20px auto;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 15px auto;
 }
 
-.cart-item {
+.cartItem {
+  margin-top: 20px;
+  width: 1400px;
   display: flex;
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 12px;
-  background-color: #fff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   
   &:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
   }
 }
 
-.cart-item-image {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  margin-right: 20px;
-  border-radius: 10px;
+.image {
+  width: 300px;
+  height: 300px;
+  object-fit:contain;
+  margin-right: 15px;
+  border-radius: 8px;
 }
 
 .cart-item-details {
@@ -38,19 +40,14 @@
   justify-content: space-between;
 }
 
-.cart-item-quantity {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
 
-.cart-item-quantity button {
-  padding: 8px 15px;
-  background-color: #ff5722;
+.quantityControls button{
+  padding: 6px 12px;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 0.9rem;
   transition: all 0.3s ease;
 
   &:hover {
@@ -58,30 +55,34 @@
     transform: scale(1.05);
   }
 }
+.quantityControls span{
+  padding: 10px;
+}
 
 .cart-item-details h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #333;
+  margin-bottom: 5px;
 }
 
 .cart-item-details p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #555;
 }
 
 .cart-item-details .price {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
   color: #4CAF50;
 }
 
 .removeButton {
-  margin-top: 10px;
-  padding: 8px 15px;
+  margin-top: 8px;
+  padding: 8px 12px;
   background-color: #ff3b30;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
 
@@ -92,9 +93,9 @@
 }
 
 .totalPrice {
-  margin-top: 30px;
+  margin-top: 20px;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #4CAF50;
   text-align: right;
 }
@@ -103,14 +104,19 @@
   .cart-item {
     flex-direction: column;
     align-items: center;
+    padding: 12px;
   }
 
   .cart-item-image {
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   .cart-item-details {
     text-align: center;
+  }
+
+  .cart-item-quantity {
+    gap: 8px;
   }
 
   .totalPrice {

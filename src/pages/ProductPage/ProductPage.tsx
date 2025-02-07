@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { addItemToCart } from '../store/cartSlice';
-import { getProductById } from '../api/api';
-import { Product } from '../store/Product'; 
-import styles from '../styles/ProductPage.module.scss'; 
+import { addItemToCart } from '../../store/cartSlice';
+import { getProductById } from '../../api/api';
+import { Product } from '../../store/Product'; 
+import styles from '../ProductPage/ProductPage.module.scss'; 
 
 const ProductPage: React.FC = () => {
   const { id } = useParams();

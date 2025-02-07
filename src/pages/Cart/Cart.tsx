@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from '../store';
-import { addItemToCart, deleteItemToCart, removeItemFromCart, clearCart } from '../store/cartSlice';
-import { CartItem } from '../store/cartSlice';
-import styles from '../styles/Cart.module.scss'; // Импортируем стили из Cart.module.scss
+import { RootState } from '../../store';
+import { addItemToCart, deleteItemToCart, removeItemFromCart, clearCart } from '../../store/cartSlice';
+import { CartItem } from '../../store/cartSlice';
+import styles from '../Cart/Cart.module.scss';
 
 const Cart: React.FC = () => {
   const dispatch = useDispatch();

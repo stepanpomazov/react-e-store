@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { getProducts } from '../api/api';
+import { useEffect, useState } from 'react';
+import { getProducts } from '../../api/api';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import { RootState } from '../store';
-import styles from '../styles/Home.module.scss';
+import styles from '../Home/Home.module.scss';
 
 interface Product {
   id: number;
@@ -14,9 +12,6 @@ interface Product {
 
 const Home = () => {
   const [products, setProducts] = useState<Product[]>([]);
-  const cartItemCount = useSelector((state: RootState) =>
-    state.cart.items.reduce((sum, item) => sum + item.quantity, 0)
-  );
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -27,11 +22,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={styles.home}>
+    <div className={styles.home}> 
       <h1>Product Catalog</h1>
-      <div>
-        <Link to="/cart">Cart ({cartItemCount} items)</Link>
-      </div>
       <div className={styles.productList}>
         {products.map((product) => (
           <div key={product.id} className={styles.productCard}>

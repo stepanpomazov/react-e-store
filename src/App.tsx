@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import ProductPage from './pages/ProductPage';
-import Cart from './pages/Cart';
-import CartIcon from './components/CartIcon'; // Импортируем компонент корзины
-import './styles/global.scss'; // Импортируем глобальные стили
+import Home from './pages/Home/Home';
+import ProductPage from './pages/ProductPage/ProductPage';
+import Cart from './pages/Cart/Cart';
+import CartIcon from './components/CartIcon'; 
+
 
 const App: React.FC = () => {
   return (
