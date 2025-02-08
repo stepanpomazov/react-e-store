@@ -8,25 +8,25 @@ import styles from '../ProductPage/ProductPage.module.scss';
 
 const ProductPage: React.FC = () => {
   const { id } = useParams();
-  const [product, setProduct] = useState<Product | null>(null); // Используем тип Product для состояния
-  const [loading, setLoading] = useState<boolean>(true);  // Для отслеживания состояния загрузки
-  const [error, setError] = useState<string | null>(null);  // Для отслеживания ошибок
+  const [product, setProduct] = useState<Product | null>(null); 
+  const [loading, setLoading] = useState<boolean>(true);  // отслеживание состояния загрузки
+  const [error, setError] = useState<string | null>(null);  // отслеживание ошибок
   const dispatch = useDispatch();
 
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const fetchedProduct = await getProductById(id || '');  // Если id пустое, передаем пустую строку
+        const fetchedProduct = await getProductById(id || ''); 
         setProduct(fetchedProduct);
-      } catch (err: unknown) {  // Заменили any на unknown
+      } catch (err: unknown) { 
         if (err instanceof Error) {
           setError('Ошибка загрузки продукта. Пожалуйста, попробуйте позже.');
-          console.error(err.message);  // Логируем ошибку, если это объект ошибки
+          console.error(err.message); 
         } else {
           setError('Произошла неизвестная ошибка');
         }
       } finally {
-        setLoading(false); // Завершаем процесс загрузки
+        setLoading(false); 
       }
     };
   
