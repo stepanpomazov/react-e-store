@@ -18,7 +18,7 @@
 
 ## Documentation
 
--[Fakestoreapi Docs](https://fakestoreapi.com/docs))</br>
+-[Fakestoreapi Docs](https://fakestoreapi.com/docs)</br>
 
 ***
 
